@@ -1,27 +1,3 @@
-// import React from "react";
-// import TigerImage from "../Images/Tiger.jpg";
-
-// const Header = () => {
-//   return (
-//     <header className="flex bg-Tiger-black h-screen-80">
-//       <div className="w-1/2 flex items-center justify-center flex-col text-center">
-//         {/* Add your title here */}
-//         <h1 className="text-TigerColor font-TigerTitle text-5xl">Tiger Gym</h1>
-//         <h4 className="text-white font-TitleDes pt-7 text-2xl">
-//           It's hard to beat a person who never gives up.
-//         </h4>
-//       </div>
-//       <div className="w-1/2 relative h-full">
-//         {/* Add your image here */}
-//         <img src={TigerImage} className="h-full md:w-auto" alt="Tiger" />
-//         <div className="absolute inset-0 bg-black opacity-60"></div>
-//       </div>
-//     </header>
-//   );
-// };
-
-// export default Header;
-
 import React from "react";
 import TigerImage from "../Images/Tiger.jpg";
 

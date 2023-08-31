@@ -3,15 +3,31 @@ import QRCode from "react-qr-code";
 
 function Qrcode() {
   const currentDate = new Date();
-  const formattedDate = currentDate.toISOString().split("T")[0];
+  // const formattedDate = currentDate.toISOString().split("T")[0];
+
+  // Get options for formatting the date with the Asia/Kolkata timezone
+  const options = {
+    timeZone: "Asia/Kolkata",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    // hour: "2-digit",
+    // minute: "2-digit",
+    // second: "2-digit",
+  };
+
+  // Format the date with the specified options
+  const formattedDate = currentDate.toLocaleString("en-IN", options);
+
+  console.log(formattedDate);
 
   return (
     // <div style={{ background: "#FFA500", padding: "16px" }}>
-    <div className="flex bg-TigerColor p-10 justify-center sm:w-full flex-col">
-      <h3 className="text-center text-5xl font-semibold font-Attendence">
+    <div className="flex bg-TigerColor p-10 justify-center flex-col">
+      <h3 className="text-center text-3xl md:text-5xl font-semibold font-Attendence">
         Attendence
       </h3>
-      <h4 className="text-center text-3xl pb-8">
+      <h4 className="text-center text-2xl pb-8 pt-3 font-semibold">
         Scan the QR code to get the Attendence
       </h4>
       <QRCode
