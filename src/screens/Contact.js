@@ -10,7 +10,7 @@ const Contact = () => {
         <MapContainer />
       </div>
       {/* Detail Card */}
-      <div className="md:w-1/2 w-full md:flex h-screen-50">
+      <div className="md:w-1/2 w-full md:flex">
         <DetailCard />
       </div>
     </div>
