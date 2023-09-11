@@ -3,15 +3,15 @@ import Custom from "./custom.png";
 
 const DetailCard = () => {
   return (
-    <div className="flex md:flex-col items-center justify-center w-full bg-Tiger-black h-screen-50 md:pt-0 pt-32 md:space-x-0 space-x-[-30%]">
+    <div className="flex md:flex-col items-center justify-center w-full bg-Tiger-black h-screen-50 md:pt-0 pt-32 md:space-x-0 space-x-[-20%]">
       {/* Photo */}
       <div className="md:w-1/2 w-full p-4 flex justify-center items-center">
-        <div className="w-36 h-36 rounded-full bg-TigerColor">
+        <div className="md:w-36 md:h-36 h-28 w-28 rounded-full bg-TigerColor">
           {/* Place the gym master's photo here */}
           <img
             src={Custom}
             alt="Gym Master"
-            className="w-32 h-32 rounded-full ml-2 mt-2"
+            className="md:w-32 md:h-32 h-24 w-24 rounded-full ml-2 mt-2"
           />
         </div>
       </div>
