@@ -3,6 +3,7 @@ import Header from "./screens/Header";
 import Qrcode from "./screens/Qrcode";
 import Navigation from "./screens/Navigation";
 import Contact from "./screens/Contact";
+import TopScrollButton from "./screens/TopScrollButton";
 import "./App.css";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <Header />
       <Qrcode />
       <Contact />
+      <TopScrollButton />
     </div>
   );
 }
