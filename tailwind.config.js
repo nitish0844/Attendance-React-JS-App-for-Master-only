@@ -9,7 +9,7 @@ module.exports = {
       },
       height: {
         "screen-80": "80vh",
-        "screen-50": "51vh",
+        "screen-50": "400px",
       },
       textColor: {
         TigerColor: "#FFA500",

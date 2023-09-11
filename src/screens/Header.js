@@ -3,7 +3,10 @@ import TigerImage from "../Images/Tiger.jpg";
 
 const Header = () => {
   return (
-    <header className="flex bg-Tiger-black h-screen-80 md:flex">
+    <header
+      id="home-section"
+      className="flex bg-Tiger-black h-screen-80 md:flex"
+    >
       <div className="w-full flex flex-col md:flex-row">
         {/* Title */}
         <div className="mt-10 md:w-1/2 flex items-center justify-center flex-col text-center md:text-center px-6 md:px-16">

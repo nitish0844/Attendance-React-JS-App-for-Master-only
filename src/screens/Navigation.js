@@ -9,6 +9,26 @@ const Navigation = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+  const handleSmoothScroll = (event, targetId) => {
+    event.preventDefault();
+
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      const windowHeight = window.innerHeight;
+      const sectionHeight = targetElement.offsetHeight;
+
+      const targetPosition =
+        targetElement.offsetTop - (windowHeight - sectionHeight) / 2;
+
+      window.scrollTo({
+        behavior: "smooth",
+        top: targetPosition,
+      });
+    }
+
+    toggleMenu(); // Close the menu after clicking
+  };
 
   return (
     //Add fixed to float over the header
@@ -38,22 +58,38 @@ const Navigation = () => {
         {isOpen && (
           <ul className="mt-2 fixed top-40 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center self-center z-50 bg-Tiger-black space-y-4 w-full">
             <li>
-              <a className="rounded-lg text-white py-2 px-4 md:py-2 md:px-4 text-sm md:text-base md:font-semibold cursor-pointer">
+              <a
+                href="#home-section"
+                onClick={(e) => handleSmoothScroll(e, "home-section")}
+                className="rounded-lg text-white py-2 px-4 md:py-2 md:px-4 text-sm md:text-base md:font-semibold cursor-pointer"
+              >
                 Home
               </a>
             </li>
             <li>
-              <a className="rounded-lg text-white py-2 px-4 md:py-2 md:px-4 text-sm md:text-base md:font-semibold cursor-pointer">
+              <a
+                href="#attendance-section"
+                onClick={(e) => handleSmoothScroll(e, "attendance-section")}
+                className="rounded-lg text-white py-2 px-4 md:py-2 md:px-4 text-sm md:text-base md:font-semibold cursor-pointer"
+              >
                 Attendence
               </a>
             </li>
             <li>
-              <a className="rounded-lg text-white py-2 px-4 md:py-2 md:px-4 text-sm md:text-base md:font-semibold cursor-pointer">
+              <a
+                href="#gallery-section"
+                onClick={(e) => handleSmoothScroll(e, "gallery-section")}
+                className="rounded-lg text-white py-2 px-4 md:py-2 md:px-4 text-sm md:text-base md:font-semibold cursor-pointer"
+              >
                 Gallery
               </a>
             </li>
             <li>
-              <a className="rounded-lg text-white py-2 px-4 md:py-2 md:px-4 text-sm md:text-base md:font-semibold cursor-pointer">
+              <a
+                href="#contact-section"
+                onClick={(e) => handleSmoothScroll(e, "contact-section")}
+                className="rounded-lg text-white py-2 px-4 md:py-2 md:px-4 text-sm md:text-base md:font-semibold cursor-pointer"
+              >
                 Contact
               </a>
             </li>
@@ -65,22 +101,38 @@ const Navigation = () => {
 
       <ul className="hidden md:flex space-x-8">
         <li>
-          <a className="bg-TigerColor rounded-lg text-black py-2 px-2 md:py-2 md:px-4 text-sm md:text-base md:font-semibold cursor-pointer">
+          <a
+            href="#home-section"
+            onClick={(e) => handleSmoothScroll(e, "home-section")}
+            className="bg-TigerColor rounded-lg text-black py-2 px-2 md:py-2 md:px-4 text-sm md:text-base md:font-semibold cursor-pointer"
+          >
             Home
           </a>
         </li>
         <li>
-          <a className="bg-TigerColor rounded-lg text-black py-2 px-2 md:py-2 md:px-4 text-sm md:text-base md:font-semibold cursor-pointer">
+          <a
+            href="#attendance-section"
+            onClick={(e) => handleSmoothScroll(e, "attendance-section")}
+            className="bg-TigerColor rounded-lg text-black py-2 px-2 md:py-2 md:px-4 text-sm md:text-base md:font-semibold cursor-pointer"
+          >
             Attendance
           </a>
         </li>
         <li>
-          <a className="bg-TigerColor rounded-lg text-black py-2 px-2 md:py-2 md:px-4 text-sm md:text-base md:font-semibold cursor-pointer">
+          <a
+            href="#gallery-section"
+            onClick={(e) => handleSmoothScroll(e, "gallery-section")}
+            className="bg-TigerColor rounded-lg text-black py-2 px-2 md:py-2 md:px-4 text-sm md:text-base md:font-semibold cursor-pointer"
+          >
             Gallery
           </a>
         </li>
         <li>
-          <a className="bg-TigerColor rounded-lg text-black py-2 px-2 md:py-2 md:px-4 text-sm md:text-base md:font-semibold cursor-pointer">
+          <a
+            href="#contact-section"
+            onClick={(e) => handleSmoothScroll(e, "contact-section")}
+            className="bg-TigerColor rounded-lg text-black py-2 px-2 md:py-2 md:px-4 text-sm md:text-base md:font-semibold cursor-pointer"
+          >
             Contact
           </a>
         </li>

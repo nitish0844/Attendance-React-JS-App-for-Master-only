@@ -8,8 +8,8 @@ const MapContainer = (props) => {
   };
 
   return (
-    // <div className="md:h-96 md:w-1/2 h-72 w-full relative pb-48">
-    <div className="relative">
+    <div className="md:h-96 h-72 w-full relative pb-48">
+      {/* <div className="relative"> */}
       <Map
         google={props.google}
         zoom={15}

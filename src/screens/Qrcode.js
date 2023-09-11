@@ -23,7 +23,10 @@ function Qrcode() {
 
   return (
     // <div style={{ background: "#FFA500", padding: "16px" }}>
-    <div className="flex bg-TigerColor p-10 justify-center flex-col">
+    <div
+      id="attendance-section"
+      className="flex bg-TigerColor p-10 justify-center flex-col md:h-screen-80"
+    >
       <h3 className="text-center text-3xl md:text-5xl font-semibold font-Attendence">
         Attendence
       </h3>
@@ -32,7 +35,7 @@ function Qrcode() {
       </h4>
       <QRCode
         className="flex md:w-full w-auto"
-        size={250}
+        size={280}
         // style={{ height: "auto", maxWidth: "20%", width: "50%" }}
         value={formattedDate}
         viewBox={`0 0 10 10`}

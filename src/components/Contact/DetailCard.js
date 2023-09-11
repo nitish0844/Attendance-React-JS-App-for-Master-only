@@ -3,7 +3,7 @@ import Custom from "./custom.png";
 
 const DetailCard = () => {
   return (
-    <div className="flex flex-col items-center justify-center w-full bg-Tiger-black h-screen-50">
+    <div className="flex md:flex-col items-center justify-center w-full bg-Tiger-black h-screen-50 md:pt-0 sm:pt-32 md:space-x-0 sm:space-x-[-30%]">
       {/* Photo */}
       <div className="md:w-1/2 w-full p-4 flex justify-center items-center">
         <div className="w-36 h-36 rounded-full bg-TigerColor">
@@ -17,7 +17,7 @@ const DetailCard = () => {
       </div>
       {/* Information */}
       <div className="md:w-1/2 w-full p-4 items-center">
-        <h2 className="text-xl text-TigerColor font-semibold mb-2 text-center">
+        <h2 className="text-xl text-TigerColor font-semibold mb-2 text-center ">
           Gym Master's Name
         </h2>
         <p className="text-TigerColor text-center">Mobile: +1234567890</p>
