@@ -9,17 +9,14 @@ const Navigation = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-  const handleSmoothScroll = (event, targetId) => {
+
+  const handleSmoothScroll = (event, targetId, customOffset = 0) => {
     event.preventDefault();
 
     const targetElement = document.getElementById(targetId);
 
     if (targetElement) {
-      const windowHeight = window.innerHeight;
-      const sectionHeight = targetElement.offsetHeight;
-
-      const targetPosition =
-        targetElement.offsetTop - (windowHeight - sectionHeight) / 2;
+      const targetPosition = targetElement.offsetTop - customOffset;
 
       window.scrollTo({
         behavior: "smooth",
@@ -29,7 +26,6 @@ const Navigation = () => {
 
     toggleMenu(); // Close the menu after clicking
   };
-
   return (
     //Add fixed to float over the header
     <nav className="flex p-4 bg-Tiger-black justify-end text-white md:justify-end md:pl-11 z-20">
